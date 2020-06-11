@@ -14,4 +14,22 @@ public class MyController {
         }
         return result;
     }
+
+
+    public String handleRequest2(User user) {
+        String result = "";
+        result.concat(changeStatus());
+        result.concat(editCase());
+        return result;
+    }
+
+    @Secured({"Stuff"})
+    private String changeStatus() {
+        return null;
+    }
+
+    @Secured({"Admin"})
+    private String editCase() {
+        return null;
+    }
 }
